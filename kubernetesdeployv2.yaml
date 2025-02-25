@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: adwitha-deploy
   labels:
-    app: insurance-app
+    app: insurance
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: insurance-app
+      app: insurance
   template:
     metadata:
       labels:
-        app: insurance-app
+        app: insurance
     spec:
       containers:
       - name: insurance-container
@@ -25,10 +25,10 @@ kind: Service
 metadata:
   name: insurance-np-service
   labels:
-    app: insurance-app
+    app: insurance
 spec:
   selector:
-    app: insurance-app
+    app: insurance
 
   type: NodePort
   ports:
